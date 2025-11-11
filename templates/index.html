@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Globe</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div id="globe-container"></div>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader"></div>
+        <p>Loading Globe...</p>
+    </div>
+
+    <!-- Info Panel -->
+    <div id="info-panel" class="hidden">
+        <div class="info-header">
+            <h3 id="region-name">Region Name</h3>
+            <button id="close-panel">&times;</button>
+        </div>
+        <div class="info-content">
+            <p><strong>Code:</strong> <span id="region-code">-</span></p>
+            <p><strong>Type:</strong> <span id="region-type">-</span></p>
+            <p><strong>Owner:</strong> <span id="region-owner">-</span></p>
+            <p><strong>Points:</strong> <span id="region-points">-</span></p>
+        </div>
+    </div>
+
+    <!-- Three.js from CDN -->
+    <script type="importmap">
+        {
+            "imports": {
+                "earcut": "https://cdn.jsdelivr.net/npm/earcut@2.2.4/src/earcut.min.js",
+                "three": "https://cdn.jsdelivr.net/npm/three@0.178.0/build/three.module.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.178.0/examples/jsm/"
+            }
+        }
+    </script>
+
+    <script type="module" src="{{ url_for('static', filename='js/globe.js') }}"></script>
+</body>
+</html>

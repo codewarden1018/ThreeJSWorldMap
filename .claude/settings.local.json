@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:milradar.com)",
+      "Bash(pip install:*)",
+      "Bash(python app.py:*)",
+      "Bash(timeout 3:*)",
+      "Bash(python app_sqlite.py:*)",
+      "Bash(ping:*)",
+      "Bash(taskkill:*)",
+      "Bash(python import_regions.py:*)",
+      "Bash(tasklist:*)",
+      "Bash(findstr:*)",
+      "Bash(python -c:*)",
+      "Bash(python import_better_states.py:*)",
+      "Bash(python import_detailed_states.py:*)",
+      "Bash(dir:*)",
+      "Bash(sqlite3:*)",
+      "Bash(python import_countries.py:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
